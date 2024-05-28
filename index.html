@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Social Sharing Links</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script type="module">
+        import { SharingLink } from './index.js';
+
+        window.SharingLink = SharingLink;
+    </script>
+</head>
+<body>
+    <h1>Social sharing links</h1>
+    <div x-data="{
+        params: {
+            url: 'https://example.com',
+            title: 'Title of the example website',
+            description: 'Description of the example website.',
+        },
+        sharingLink(network, params) {
+            return new SharingLink(network, params);
+        }
+    }" class="flex gap-2 items-center justify-center mb-8 bg-gray-200 rounded-lg px-4 py-2">
+        <div>Share:</div>
+        <ul class="flex gap-4">
+            <li>
+                <a :href="params.url" @click.prevent="() => sharingLink('facebook', params).share()">Facebook</a>
+            </li>
+            <li>
+                <a :href="params.url" @click.prevent="() => sharingLink('twitter', params).share()">X</a>
+            </li>
+            <li>
+                <a :href="params.url" @click.prevent="() => sharingLink('linkedin', params).share()">LinkedIn</a>
+            </li>
+            <li>
+                <a :href="params.url" @click.prevent="() => sharingLink('xing', params).share()">Xing</a>
+            </li>
+            <li>
+                <a :href="params.url" @click.prevent="() => sharingLink('threads', params).share()">Threads</a>
+            </li>
+            <li>
+                <a :href="params.url" @click.prevent="() => sharingLink('email', params).share()">Email</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

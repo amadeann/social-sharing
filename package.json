@@ -1,0 +1,26 @@
+{
+  "name": "@amadeann/social-sharing",
+  "version": "0.1.0",
+  "description": "Generate social sharing links for popular social media platforms.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amadeann/social-sharing.git"
+  },
+  "keywords": [
+    "social",
+    "sharing",
+    "social-sharing",
+    "social-networks",
+    "social-shares"
+  ],
+  "author": "Amadeusz Annissimo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amadeann/social-sharing/issues"
+  },
+  "homepage": "https://github.com/amadeann/social-sharing#readme"
+}
